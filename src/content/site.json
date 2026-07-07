@@ -1,94 +1,105 @@
 {
-  "nav": {
-    "title": "Aman Takher",
-    "subtitle": "Software Support Engineer"
-  },
-  "intro": {
-    "name": "Aman Takher",
-    "role": "Software Support Engineer"
-  },
-  "hero": {
-    "eyebrow": "Aman Takher · Software Support Engineer",
-    "titleTop": "I keep enterprise",
-    "titleMiddle": "data platforms",
-    "titleAccent": "running.",
-    "subtitle": "5+ years resolving complex production issues across Kubernetes, Azure, SQL, and observability stacks. I trace every problem from first alert to root cause to fix.",
-    "ctaPrimary": "Get in touch",
-    "ctaSecondary": "Download resume",
-    "meta": ["Toronto, Canada", "Open to remote", "Azure & Terraform certified"]
+  "contact": {
+    "titlePrefix": "Let's",
+    "titleAccent": "talk.",
+    "subtitle": "Open to senior support, platform, and cloud engineering roles, remote or Toronto based. Drop a message and it lands straight in my inbox.",
+    "formId": "ab68bd2b76fd11c5c4a12484b56a04c8",
+    "linkedin": "https://www.linkedin.com/in/aman-takher-97016617a",
+    "location": "Toronto, ON · Open to remote"
   },
   "marquee": {
     "label": "Companies I've worked with",
-    "items": ["Ataccama", "Esri Canada", "BMO", "Mount Sinai"]
+    "items": [
+      "Ataccama",
+      "Esri Canada",
+      "BMO",
+      "Mount Sinai"
+    ]
   },
-  "stats": [
-    { "value": 450, "suffix": "+", "decimals": 0, "label": "Support tickets resolved (Ataccama)" },
-    { "value": 96, "suffix": "%", "decimals": 0, "label": "First-response SLA" },
-    { "value": 4.8, "suffix": "/5", "decimals": 1, "label": "Customer satisfaction" },
-    { "value": 5, "suffix": "+", "decimals": 0, "label": "Years in technical roles" }
-  ],
-  "capabilities": {
-    "eyebrow": "What I do",
-    "title": "From symptom to",
-    "titleAccent": "root cause.",
-    "subtitle": "Enterprise SaaS support at the platform level, where the fix might live in a Helm chart, a SQL query, an IAM policy, or a JDBC driver.",
-    "cards": [
+  "skills": {
+    "eyebrow": "Skills",
+    "title": "The",
+    "titleAccent": "toolbox.",
+    "groups": [
       {
-        "icon": "🔍",
-        "title": "Root-cause analysis",
-        "text": "Stack traces, timeouts, OOMKills. I dig through application logs, SQL state, and environment diagnostics until the actual cause is found, not just the symptom.",
-        "tags": ["Grafana", "Loki / LogQL", "SQL", "Linux"],
-        "wide": true
+        "name": "SQL & databases",
+        "items": [
+          "SQL",
+          "PostgreSQL",
+          "MSSQL",
+          "DB2",
+          "Azure SQL",
+          "CosmosDB"
+        ]
       },
       {
-        "icon": "☸️",
-        "title": "Kubernetes & cloud",
-        "text": "Troubleshooting hybrid Kubernetes/Helm deployments and Azure infrastructure, backed by Azure Administrator and Terraform Associate certifications.",
-        "tags": ["Kubernetes", "Helm", "Docker", "Azure", "Terraform"],
-        "wide": true
+        "name": "Cloud & infrastructure",
+        "items": [
+          "Azure",
+          "Terraform",
+          "Kubernetes",
+          "Helm",
+          "Docker",
+          "VMware vSphere"
+        ]
       },
       {
-        "icon": "🗄️",
-        "title": "Data platforms",
-        "text": "I write SQL daily across PostgreSQL, MSSQL, Snowflake, and Databricks to validate data quality output, reproduce discrepancies, and fix connectivity.",
-        "tags": ["PostgreSQL", "Snowflake", "Databricks", "MSSQL"],
-        "wide": false
+        "name": "Data platforms",
+        "items": [
+          "Snowflake",
+          "Databricks"
+        ]
       },
       {
-        "icon": "🔐",
-        "title": "APIs & identity",
-        "text": "REST, SOAP, and GraphQL integration debugging, plus authentication and access issues across Keycloak, Entra ID, and RBAC.",
-        "tags": ["REST", "Keycloak", "Entra ID", "RBAC"],
-        "wide": false
+        "name": "Observability",
+        "items": [
+          "Grafana",
+          "Loki (LogQL)",
+          "Azure Monitor"
+        ]
       },
       {
-        "icon": "🤝",
-        "title": "Escalation partner",
-        "text": "Bridging customers with engineering, DevOps, and product teams. I reproduce defects, validate workarounds, and write docs so issues don't come back.",
-        "tags": ["Jira", "Docs", "Knowledge base"],
-        "wide": false
+        "name": "Identity & access",
+        "items": [
+          "Keycloak",
+          "Microsoft Entra ID",
+          "RBAC"
+        ]
+      },
+      {
+        "name": "APIs & integration",
+        "items": [
+          "REST",
+          "GraphQL",
+          "SOAP",
+          "JSON"
+        ]
+      },
+      {
+        "name": "AI & automation",
+        "items": [
+          "Claude / Anthropic API",
+          "LLM ticket triage",
+          "RAG"
+        ]
+      },
+      {
+        "name": "Scripting & tooling",
+        "items": [
+          "Bash",
+          "PowerShell",
+          "Git",
+          "Linux CLI",
+          "Azure CLI",
+          "Jira",
+          "ServiceNow"
+        ]
       }
     ]
   },
-  "triage": {
-    "eyebrow": "Featured project",
-    "titleTop": "AI-powered triage.",
-    "titleAccent": "In production.",
-    "subtitle": "I contribute to an LLM-based Slack bot that triages incoming support tickets for the whole team, suggesting classification, routing, and likely root causes from historical data.",
-    "features": [
-      {
-        "title": "Auto-classification & routing",
-        "text": "Incoming tickets are classified by product area and severity, then routed to the right queue before a human touches them."
-      },
-      {
-        "title": "RAG over Jira, Notion & Slack",
-        "text": "Retrieves similar past issues by error code and symptom across three knowledge sources to suggest likely root causes."
-      },
-      {
-        "title": "Live in production",
-        "text": "Built on the Claude API and running daily in production, cutting manual triage time and speeding up first response."
-      }
-    ]
+  "nav": {
+    "title": "Aman Takher",
+    "subtitle": "Software Support Engineer"
   },
   "experience": {
     "eyebrow": "Experience",
@@ -140,46 +151,179 @@
       }
     ]
   },
-  "skills": {
-    "eyebrow": "Skills",
-    "title": "The",
-    "titleAccent": "toolbox.",
-    "groups": [
-      { "name": "SQL & databases", "items": ["SQL", "PostgreSQL", "MSSQL", "DB2", "Azure SQL", "CosmosDB"] },
-      { "name": "Cloud & infrastructure", "items": ["Azure", "Terraform", "Kubernetes", "Helm", "Docker", "VMware vSphere"] },
-      { "name": "Data platforms", "items": ["Snowflake", "Databricks"] },
-      { "name": "Observability", "items": ["Grafana", "Loki (LogQL)", "Azure Monitor"] },
-      { "name": "Identity & access", "items": ["Keycloak", "Microsoft Entra ID", "RBAC"] },
-      { "name": "APIs & integration", "items": ["REST", "GraphQL", "SOAP", "JSON"] },
-      { "name": "AI & automation", "items": ["Claude / Anthropic API", "LLM ticket triage", "RAG"] },
-      { "name": "Scripting & tooling", "items": ["Bash", "PowerShell", "Git", "Linux CLI", "Azure CLI", "Jira", "ServiceNow"] }
-    ]
+  "intro": {
+    "name": "Aman Takher",
+    "role": "Software Support Engineer"
   },
   "certs": {
     "eyebrow": "Credentials",
     "title": "Certified for the",
     "titleAccent": "cloud.",
     "items": [
-      { "logo": "microsoft", "name": "Microsoft Certified: Azure Administrator Associate", "date": "March 2023" },
-      { "logo": "terraform", "name": "HashiCorp Certified: Terraform Associate", "date": "November 2023" },
-      { "logo": "microsoft", "name": "Microsoft Certified: Azure Fundamentals", "date": "December 2022" },
-      { "logo": "comptia", "name": "CompTIA A+", "date": "January 2021" }
+      {
+        "logo": "microsoft",
+        "name": "Microsoft Certified: Azure Administrator Associate",
+        "date": "March 2023"
+      },
+      {
+        "logo": "terraform",
+        "name": "HashiCorp Certified: Terraform Associate",
+        "date": "November 2023"
+      },
+      {
+        "logo": "microsoft",
+        "name": "Microsoft Certified: Azure Fundamentals",
+        "date": "December 2022"
+      },
+      {
+        "logo": "comptia",
+        "name": "CompTIA A+",
+        "date": "January 2021"
+      }
     ],
     "education": [
-      { "program": "B.Tech, Software Engineering Technology", "school": "McMaster University, Hamilton", "dates": "2024 – Present" },
-      { "program": "Advanced Diploma, Computer Engineering Technology", "school": "Seneca College, Toronto", "dates": "2018 – 2020" }
+      {
+        "program": "B.Tech, Software Engineering Technology",
+        "school": "McMaster University, Hamilton",
+        "dates": "2024 – Present"
+      },
+      {
+        "program": "Advanced Diploma, Computer Engineering Technology",
+        "school": "Seneca College, Toronto",
+        "dates": "2018 – 2020"
+      }
     ]
   },
-  "contact": {
-    "titlePrefix": "Let's",
-    "titleAccent": "talk.",
-    "subtitle": "Open to senior support, platform, and cloud engineering roles, remote or Toronto based. Drop a message and it lands straight in my inbox.",
-    "formId": "d5ee6c430fa51264c6104fcdc3efb014",
-    "linkedin": "https://www.linkedin.com/in/aman-takher-97016617a",
-    "location": "Toronto, ON · Open to remote"
+  "triage": {
+    "eyebrow": "Featured project",
+    "titleTop": "AI-powered triage.",
+    "titleAccent": "In production.",
+    "subtitle": "I contribute to an LLM-based Slack bot that triages incoming support tickets for the whole team, suggesting classification, routing, and likely root causes from historical data.",
+    "features": [
+      {
+        "title": "Auto-classification & routing",
+        "text": "Incoming tickets are classified by product area and severity, then routed to the right queue before a human touches them."
+      },
+      {
+        "title": "RAG over Jira, Notion & Slack",
+        "text": "Retrieves similar past issues by error code and symptom across three knowledge sources to suggest likely root causes."
+      },
+      {
+        "title": "Live in production",
+        "text": "Built on the Claude API and running daily in production, cutting manual triage time and speeding up first response."
+      }
+    ]
+  },
+  "capabilities": {
+    "eyebrow": "What I do",
+    "title": "From symptom to",
+    "titleAccent": "root cause.",
+    "subtitle": "Enterprise SaaS support at the platform level, where the fix might live in a Helm chart, a SQL query, an IAM policy, or a JDBC driver.",
+    "cards": [
+      {
+        "icon": "🔍",
+        "title": "Root-cause analysis",
+        "text": "Stack traces, timeouts, OOMKills. I dig through application logs, SQL state, and environment diagnostics until the actual cause is found, not just the symptom.",
+        "tags": [
+          "Grafana",
+          "Loki / LogQL",
+          "SQL",
+          "Linux"
+        ],
+        "wide": true
+      },
+      {
+        "icon": "☸️",
+        "title": "Kubernetes & cloud",
+        "text": "Troubleshooting hybrid Kubernetes/Helm deployments and Azure infrastructure, backed by Azure Administrator and Terraform Associate certifications.",
+        "tags": [
+          "Kubernetes",
+          "Helm",
+          "Docker",
+          "Azure",
+          "Terraform"
+        ],
+        "wide": true
+      },
+      {
+        "icon": "🗄️",
+        "title": "Data platforms",
+        "text": "I write SQL daily across PostgreSQL, MSSQL, Snowflake, and Databricks to validate data quality output, reproduce discrepancies, and fix connectivity.",
+        "tags": [
+          "PostgreSQL",
+          "Snowflake",
+          "Databricks",
+          "MSSQL"
+        ],
+        "wide": false
+      },
+      {
+        "icon": "🔐",
+        "title": "APIs & identity",
+        "text": "REST, SOAP, and GraphQL integration debugging, plus authentication and access issues across Keycloak, Entra ID, and RBAC.",
+        "tags": [
+          "REST",
+          "Keycloak",
+          "Entra ID",
+          "RBAC"
+        ],
+        "wide": false
+      },
+      {
+        "icon": "🤝",
+        "title": "Escalation partner",
+        "text": "Bridging customers with engineering, DevOps, and product teams. I reproduce defects, validate workarounds, and write docs so issues don't come back.",
+        "tags": [
+          "Jira",
+          "Docs",
+          "Knowledge base"
+        ],
+        "wide": false
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "Aman Takher · Software Support Engineer",
+    "titleTop": "I keep enterprise",
+    "titleMiddle": "data platforms",
+    "titleAccent": "running.",
+    "subtitle": "5+ years resolving complex production issues across Kubernetes, Azure, SQL, and observability stacks. I trace every problem from first alert to root cause to fix.",
+    "ctaPrimary": "Get in touch",
+    "ctaSecondary": "Download resume",
+    "meta": [
+      "Toronto, Canada",
+      "Open to remote",
+      "Azure & Terraform certified"
+    ]
   },
   "footer": {
     "name": "Aman Takher",
     "right": "Built with React · takher.ca"
-  }
+  },
+  "stats": [
+    {
+      "value": 450,
+      "suffix": "+",
+      "decimals": 0,
+      "label": "Support tickets resolved (Ataccama)"
+    },
+    {
+      "value": 96,
+      "suffix": "%",
+      "decimals": 0,
+      "label": "First-response SLA"
+    },
+    {
+      "value": 4.8,
+      "suffix": "/5",
+      "decimals": 1,
+      "label": "Customer satisfaction"
+    },
+    {
+      "value": 5,
+      "suffix": "+",
+      "decimals": 0,
+      "label": "Years in technical roles"
+    }
+  ]
 }

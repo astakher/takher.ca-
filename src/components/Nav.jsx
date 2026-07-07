@@ -22,7 +22,6 @@ export default function Nav() {
     <nav className={`nav${scrolled ? ' scrolled' : ''}`}>
       <a href="#top" className="nav-logo">
         {site.nav.title}
-        <span className="nav-logo-sub"> · {site.nav.subtitle}</span>
       </a>
       <div className="nav-links">
         {LINKS.map(([label, href]) => (

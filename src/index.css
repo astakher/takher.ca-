@@ -372,17 +372,6 @@ section {
   white-space: nowrap;
 }
 
-.nav-logo-sub {
-  font-weight: 550;
-  color: var(--text-2);
-}
-
-@media (max-width: 1120px) {
-  .nav-logo-sub {
-    display: none;
-  }
-}
-
 .nav-links {
   display: flex;
   gap: 4px;

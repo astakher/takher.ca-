@@ -401,7 +401,7 @@ section {
 
 .nav-links a:not(.nav-cta):hover {
   color: var(--text);
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(16, 22, 29, 0.09);
 }
 
 .nav-cta {

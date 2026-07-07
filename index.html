@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aman Takher — Software Support &amp; Platform Engineer</title>
+    <meta
+      name="description"
+      content="Aman Takher — Software Support & Platform Engineer in Toronto. Root-cause analysis, Kubernetes, Azure, SQL, observability, and AI-powered support tooling for enterprise data platforms."
+    />
+    <meta property="og:title" content="Aman Takher — Software Support & Platform Engineer" />
+    <meta
+      property="og:description"
+      content="I keep enterprise data platforms running. Root-cause analysis, Kubernetes, Azure, SQL, and AI-powered support tooling."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://takher.ca" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" defer></script>
+    <script>
+      // Netlify Identity: after accepting an invite or logging in from an
+      // email link, send the user to the CMS admin.
+      window.addEventListener('DOMContentLoaded', function () {
+        if (window.netlifyIdentity) {
+          window.netlifyIdentity.on('init', function (user) {
+            if (!user) {
+              window.netlifyIdentity.on('login', function () {
+                document.location.href = '/admin/'
+              })
+            }
+          })
+        }
+      })
+    </script>
+  </body>
+</html>

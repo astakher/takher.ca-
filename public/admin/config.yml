@@ -1,0 +1,165 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+site_url: https://takher.ca
+display_url: https://takher.ca
+
+collections:
+  - name: "site"
+    label: "Site Content"
+    files:
+      - name: "content"
+        label: "All Website Text"
+        file: "src/content/site.json"
+        fields:
+          - label: "Navigation Bar"
+            name: "nav"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+
+          - label: "Intro Animation"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow (small line above headline)", name: "eyebrow", widget: "string" }
+              - { label: "Headline line 1", name: "titleTop", widget: "string" }
+              - { label: "Headline line 2", name: "titleMiddle", widget: "string" }
+              - { label: "Headline accent word (colored)", name: "titleAccent", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+              - { label: "Primary button text", name: "ctaPrimary", widget: "string" }
+              - { label: "Secondary button text", name: "ctaSecondary", widget: "string" }
+              - { label: "Meta line items", name: "meta", widget: "list", field: { label: "Item", name: "item", widget: "string" } }
+
+          - label: "Company Marquee"
+            name: "marquee"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Company names", name: "items", widget: "list", field: { label: "Company", name: "item", widget: "string" } }
+
+          - label: "Stats"
+            name: "stats"
+            widget: "list"
+            fields:
+              - { label: "Number", name: "value", widget: "number", value_type: "float" }
+              - { label: "Suffix (e.g. + or %)", name: "suffix", widget: "string", required: false, default: "" }
+              - { label: "Decimal places", name: "decimals", widget: "number", value_type: "int", default: 0 }
+              - { label: "Label", name: "label", widget: "string" }
+
+          - label: "What I Do"
+            name: "capabilities"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Title accent (colored)", name: "titleAccent", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+              - label: "Cards"
+                name: "cards"
+                widget: "list"
+                fields:
+                  - { label: "Icon (emoji)", name: "icon", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "text" }
+                  - { label: "Tags", name: "tags", widget: "list", field: { label: "Tag", name: "tag", widget: "string" } }
+                  - { label: "Wide card", name: "wide", widget: "boolean", default: false }
+
+          - label: "AI Triage Project"
+            name: "triage"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title line 1", name: "titleTop", widget: "string" }
+              - { label: "Title accent (colored)", name: "titleAccent", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+              - label: "Feature bullets"
+                name: "features"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "text" }
+
+          - label: "Experience"
+            name: "experience"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Title accent (colored)", name: "titleAccent", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+              - label: "Jobs"
+                name: "jobs"
+                widget: "list"
+                fields:
+                  - { label: "Role", name: "role", widget: "string" }
+                  - { label: "Company", name: "company", widget: "string" }
+                  - { label: "Dates", name: "dates", widget: "string" }
+                  - { label: "Location", name: "loc", widget: "string" }
+                  - { label: "Bullets", name: "bullets", widget: "list", required: false, default: [], field: { label: "Bullet", name: "bullet", widget: "text" } }
+
+          - label: "Skills"
+            name: "skills"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Title accent (colored)", name: "titleAccent", widget: "string" }
+              - label: "Groups"
+                name: "groups"
+                widget: "list"
+                fields:
+                  - { label: "Group name", name: "name", widget: "string" }
+                  - { label: "Skills", name: "items", widget: "list", field: { label: "Skill", name: "item", widget: "string" } }
+
+          - label: "Certifications & Education"
+            name: "certs"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Title accent (colored)", name: "titleAccent", widget: "string" }
+              - label: "Certifications"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Logo", name: "logo", widget: "select", options: ["microsoft", "terraform", "comptia"] }
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Date", name: "date", widget: "string" }
+              - label: "Education"
+                name: "education"
+                widget: "list"
+                fields:
+                  - { label: "Program", name: "program", widget: "string" }
+                  - { label: "School", name: "school", widget: "string" }
+                  - { label: "Dates", name: "dates", widget: "string" }
+
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Title prefix", name: "titlePrefix", widget: "string" }
+              - { label: "Title accent (colored)", name: "titleAccent", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+              - { label: "FormSubmit form ID", name: "formId", widget: "string", hint: "The random FormSubmit alias, not your email" }
+              - { label: "LinkedIn URL", name: "linkedin", widget: "string" }
+              - { label: "Location line", name: "location", widget: "string" }
+
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Name (after copyright year)", name: "name", widget: "string" }
+              - { label: "Right side text", name: "right", widget: "string" }

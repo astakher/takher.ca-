@@ -162,14 +162,16 @@ img {
 /* ============================================================
    The glass canvas the site sits on
    ============================================================ */
+/* No backdrop-filter here: a blur on this ancestor would swallow the
+   nav's own backdrop blur (nested backdrop roots), leaving text behind
+   the nav sharp and unreadable. The wallpaper blobs are pre-blurred, so
+   plain alpha gives the same milky-glass look. */
 .canvas {
   position: relative;
   z-index: 1;
   margin: 12px;
   border-radius: var(--radius-xl);
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(42px) saturate(170%);
-  -webkit-backdrop-filter: blur(42px) saturate(170%);
+  background: rgba(255, 255, 255, 0.62);
   border: 1px solid var(--glass-border);
   overflow: clip;
   box-shadow: 0 24px 80px rgba(31, 56, 84, 0.18),
@@ -289,9 +291,9 @@ section {
   gap: 6px;
   padding: 7px 8px 7px 20px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(36px) saturate(210%);
-  -webkit-backdrop-filter: blur(36px) saturate(210%);
+  background: rgba(255, 255, 255, 0.42);
+  backdrop-filter: blur(28px) saturate(200%) brightness(1.08);
+  -webkit-backdrop-filter: blur(28px) saturate(200%) brightness(1.08);
   border: 1px solid rgba(255, 255, 255, 0.75);
   box-shadow: 0 12px 40px rgba(31, 56, 84, 0.18),
     inset 0 1.5px 0 rgba(255, 255, 255, 0.95),
@@ -300,9 +302,24 @@ section {
     inset -1px 0 0 rgba(255, 255, 255, 0.4);
   max-width: calc(100vw - 40px);
   overflow: hidden;
+  transition: background 0.35s var(--ease), box-shadow 0.35s var(--ease),
+    transform 0.35s var(--ease);
 }
 
-/* specular sheen sweeping across the glass */
+/* once content is scrolling underneath, thicken the glass for legibility */
+.nav.scrolled {
+  background: rgba(255, 255, 255, 0.58);
+  box-shadow: 0 16px 48px rgba(31, 56, 84, 0.24),
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.nav:hover {
+  background: rgba(255, 255, 255, 0.66);
+  transform: translateX(-50%) scale(1.02);
+}
+
+/* static specular edge light */
 .nav::before {
   content: '';
   position: absolute;
@@ -316,6 +333,31 @@ section {
     rgba(255, 255, 255, 0.3) 100%
   );
   pointer-events: none;
+}
+
+/* liquid sheen that sweeps across the pill on hover */
+.nav::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -75%;
+  width: 55%;
+  background: linear-gradient(
+    105deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.65) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-18deg);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav:hover::after {
+  left: 120%;
+  opacity: 1;
+  transition: left 0.9s var(--ease), opacity 0.15s;
 }
 
 .nav > * {

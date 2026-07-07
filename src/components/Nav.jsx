@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import site from '../content/site.json'
 
 const LINKS = [
@@ -8,8 +9,17 @@ const LINKS = [
 ]
 
 export default function Nav() {
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
   return (
-    <nav className="nav">
+    <nav className={`nav${scrolled ? ' scrolled' : ''}`}>
       <a href="#top" className="nav-logo">
         {site.nav.title}
         <span className="nav-logo-sub"> · {site.nav.subtitle}</span>

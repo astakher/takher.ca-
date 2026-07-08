@@ -4,11 +4,8 @@
 
 # Serve the Vibe PDF app at takher.ca/pdf/ by proxying to its Netlify site.
 # The app is built with a relative base, so its assets resolve under /pdf/.
-[[redirects]]
-  from = "/pdf"
-  to = "/pdf/"
-  status = 301
-
+# (No /pdf -> /pdf/ 301: it fought Netlify's trailing-slash canonicalization and
+# caused a redirect loop. The nav links to "/pdf/" directly, so this covers it.)
 [[redirects]]
   from = "/pdf/*"
   to = "https://vibe-pdf.netlify.app/:splat"

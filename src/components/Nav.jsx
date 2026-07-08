@@ -29,6 +29,11 @@ export default function Nav() {
             {label}
           </a>
         ))}
+        {site.nav.pdfEditorUrl && (
+          <a className="nav-cta nav-cta-alt" href={site.nav.pdfEditorUrl}>
+            PDF Editor
+          </a>
+        )}
         <a className="nav-cta" href="#contact">
           Contact <span aria-hidden>→</span>
         </a>

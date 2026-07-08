@@ -416,6 +416,18 @@ section {
   transform: scale(1.04);
 }
 
+/* Secondary CTA (PDF Editor) — accent-tinted pill, distinct from the dark Contact button */
+.nav-cta-alt {
+  color: var(--accent);
+  background: rgba(31, 122, 224, 0.1);
+  border-color: rgba(31, 122, 224, 0.35);
+  white-space: nowrap;
+}
+
+.nav-cta-alt:hover {
+  background: rgba(31, 122, 224, 0.18);
+}
+
 @media (max-width: 860px) {
   .nav-links a:not(.nav-cta) {
     display: none;

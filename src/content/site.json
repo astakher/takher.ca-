@@ -98,7 +98,8 @@
     ]
   },
   "nav": {
-    "title": "Aman Takher"
+    "title": "Aman Takher",
+    "pdfEditorUrl": "/pdf/"
   },
   "experience": {
     "eyebrow": "Experience",

@@ -2,13 +2,19 @@
   command = "npm run build"
   publish = "dist"
 
-# Serve the Vibe PDF app at takher.ca/pdf/ by proxying to its Netlify site.
-# The app is built with a relative base, so its assets resolve under /pdf/.
-# (No /pdf -> /pdf/ 301: it fought Netlify's trailing-slash canonicalization and
-# caused a redirect loop. The nav links to "/pdf/" directly, so this covers it.)
+# Serve the Vibe PDF app at takher.ca/pdf (and /pdf/) by proxying to its Netlify
+# site. The app uses an absolute "/pdf/" base, so assets resolve with or without
+# the trailing slash. Proxy to the vibe site's /pdf/ path (its own rewrite maps
+# /pdf/* back to the physical files). No 301s -> no trailing-slash redirect loop.
+[[redirects]]
+  from = "/pdf"
+  to = "https://vibe-pdf.netlify.app/pdf/"
+  status = 200
+  force = true
+
 [[redirects]]
   from = "/pdf/*"
-  to = "https://vibe-pdf.netlify.app/:splat"
+  to = "https://vibe-pdf.netlify.app/pdf/:splat"
   status = 200
   force = true
 
